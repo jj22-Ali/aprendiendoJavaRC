@@ -88,7 +88,7 @@ console.log(alumno);
 var alumno = 'Alcaeda'
 console.log(alumno);
 
-//! El uso de VAR ya no se utiliza
+//! La variable VAR ya no se utiliza
 
 //*-------------------------------
 //? Valores
@@ -148,4 +148,30 @@ console.log(!caja);
 console.log(2 > 3 && 3 < 4);
 console.log(2 > 3 || 3 < 4);
 
+//*--------------------------------------------------------------------
+//*--------------------------------------------------------------------
+//? ARRAYS O ARREGLOS - APLICAR EL LOG
 
+let cajaNumeros = [1, 32, 532, -23, -33];
+console.log(cajaNumeros);
+
+let ficha = ['Martin', 'Nicolas', 'Alfredo', 'Lucas', 'Augusto']
+console.log(ficha);
+
+
+let ficha1 = ['Dardo', false, 57, 'Locomotora', -1000];
+console.log(ficha1);
+
+//*--------------------------------------------------------------------
+//*--------------------------------------------------------------------
+//? OBJETOS - APLICAR EL LOG
+
+let persona = {
+    nombre: 'Telemaco',
+    apellido: 'Figueroa',
+    edad: '15',
+    Odiseando: true,
+    domicilio: ['Monzon', 58, 'Monteros - Tucuman']
+};
+
+console.log(persona);
