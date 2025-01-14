@@ -60,7 +60,7 @@ console.log(`El ${num1} es mayor que ${num2}: ${num1 > num2}`);
 
 //? SOLUCION ----------------------------------------------------------------
 
-let apellido = prompt('Ingrese su apellido: ');
+/* let apellido = prompt('Ingrese su apellido: ');
 console.log(apellido);
 
 let apellidoEnmayuscula = apellido.toUpperCase();
@@ -72,7 +72,7 @@ console.log(ApellidoSinEsp);
 console.log(`El Apellido tiene ${ApellidoSinEsp.length} caracteres`);
 
 console.log(`El ultimo caracter del apellido es: ${ApellidoSinEsp.at(0)}`);
-
+ */
 
 //* -------------------------------------------------------------------------
 
@@ -90,6 +90,15 @@ C-CAPITALIZAS LA PALABRA "Mascota"
 
  */
 
- 
-
 //? SOLUCION ----------------------------------------------------------------
+
+let x = 'mascota';
+//* A
+console.log(x.toUpperCase());
+//* B
+console.log(x.toLowerCase());
+//*c
+let palabraCapitalizada = x.at(0).toUpperCase() + x.substring(1);
+console.log(palabraCapitalizada)
+
+
