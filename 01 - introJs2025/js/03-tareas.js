@@ -30,3 +30,11 @@ let lista = [32, 325, 1235, 745, 12];
 console.log(lista);
 console.log(`El numero mayor de la lista es: ${lista.Math}`);
 
+//* Tarea 3
+
+let numerosConDecimales = [46.23591, 81.12340, 91.21234]
+
+for (let i = 0; i < numerosConDecimales.length; i++){
+    let z = parseFloat(numerosConDecimales[i].toFixed(2));
+    console.log(z);
+};
