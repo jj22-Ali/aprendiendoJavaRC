@@ -73,3 +73,40 @@ if (isNaN(numero)){
         
     }
 }
+
+//-----------------------------------------------------
+//? SWITCH
+//* Sintaxis
+
+/*
+    switch(key){
+        case value:
+
+            break;
+        case values:
+
+            break;
+        default:
+
+            break;
+    }
+*/
+
+let edad = 17;
+
+switch(edad){
+    case 16:
+        console.log('Corresponde Aula A');
+        break;
+    case 17:
+        console.log('Corresponde Aula B');
+        break;
+    case 18:
+        console.log('Corresponde Aula C');
+        break;
+    default:
+        console.log('No puede ingresar!');
+        break;
+}
+
+//* El switch recibe en los casos VALORES, no puedo poner condiciones
