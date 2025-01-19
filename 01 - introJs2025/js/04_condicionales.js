@@ -73,5 +73,3 @@ if (isNaN(numero)){
         
     }
 }
-
-
