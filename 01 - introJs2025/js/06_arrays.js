@@ -70,5 +70,42 @@ console.log(alumnos);
 alumnos.unshift('Santiago');
 console.log(alumnos);
 
+//? ELIMINAR
+//* Al final
+alumnos.pop();
+console.log(alumnos);
+
+//*al principio
+alumnos.shift();
+console.log(alumnos);
+
+//* segun la posicion
+alumnos.splice(7);
+console.log(alumnos);
+
+//! actividad importante
+/*Encontar el elemento "alicandro" del arreglo y elminiarlo*/
+
+let pos = alumnos.indexOf('Alicandro');
+console.log(pos);
+
+alumnos.splice(pos, 1); //! dos parametos: posisicon - cantidad
+console.log(alumnos);
+
+//! También el SPLICE nos sirve para 
+//* Agregar elementos
+
+alumnos.splice(1, 0, 'Alan', 'Kevin');
+console.log(alumnos);
+
+/* el cero como segundo paremotro indco que NO QUIERO BORRAR NADA,  agrego una coma y luego los elementos que quiero agregar*/
+
+//* Reemplazar elementos
+
+alumnos.splice(2, 3, 'Augusto', 'Rodrigo', 'Ayrton');
+/* El 3 en este caso dice cuantos elementos reemplazo */
+console.log(alumnos);
+
+
 
 
