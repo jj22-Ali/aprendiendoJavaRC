@@ -163,13 +163,15 @@ if(!isNaN(dni)){
 //! Esta es la forma que hice yo
 
 
-for (let i = 30; i >= i; i--) {
+/*
+for (let i = 30; i >= 0; i--) {
     for(let j = 1; j <= i; j++){
         document.write(i)
     }
     document.write('<br>')
 }
 
+*/
 
 /*
 7- Haz un script que escriba una pirámide inversa de los números del 1 al número que indique el usuario (no mayor de 50)  de la siguiente forma : (suponiendo que indica 30).
@@ -184,6 +186,7 @@ for (let i = 30; i >= i; i--) {
 
 */
 
+//! Esta es la forma que hice yo
 /*
 let x = true;
 while(x){
@@ -192,12 +195,13 @@ while(x){
 
     if(!isNaN(piramide)){
         if(piramide >= 1 && piramide <= 50){
-            for(let i = 30; i >= 1;i--){
-                for(let j =1; j <= i ;j++){
+            for (let i = piramide; i >= 0; i--) {
+                for(let j = 1; j <= i; j++){
                     document.write(i)
                 }
                 document.write('<br>')
             }
+            break;
         }else{
             document.write('La piramide no puede tener mas de 50 numeros')
         }
@@ -209,3 +213,81 @@ while(x){
 }
 */
 
+/*
+8- Crea script para generar pirámide siguiente con los números del 1 al número que indique el usuario (no mayor de 50) 
+ */
+
+//! Esta forma que lo resolvio yo
+
+/*
+let NumPiramide = parseInt(prompt('Ingrese la longitud de la piramidad: '));
+
+for(let i=1; i <= NumPiramide; i++){
+    for(let j = 1; j <= i; j++){
+        document.write(j);
+    }
+    document.write('<br>')
+}
+*/
+
+/*
+9- Crea un script que escriba los números del 1 al 500, que indique cuáles son múltiplos de 4 y de 9 y que cada 5 líneas muestre una línea horizontal.
+*/
+
+//! Esta es la forma que hice yo
+
+/*
+
+let numero = parseInt(prompt('Elije un numero entre 1 - 500: '));
+
+if(!isNaN(numero)){
+    for(let i = 1; i <= numero; i++){
+        if( i % 4 == 0){
+            document.write(i + ('(Multiplo de 4)'));
+        } else if (i % 9 == 0){
+            document.write(i + ('(Multiplo de 9)'));
+        } else if (i % 5 == 0) {
+            document.write(i + '- <br> ------------------------');
+        } else {
+            document.write(i);
+        }
+        document.write('<br>')
+    }
+} else{
+    console.log('Usted no ingreso un valor correcto');
+    
+}
+*/
+
+/*
+10- Realiza un script que pida número de filas y columnas y escriba una tabla. Dentro de cada una de las celdas deberá escribirse un número consecutivo en orden descendente. Si, por ejemplo, la tabla es de 7×5 los números irán del 35 al 1.
+*/ 
+
+//? forma de hacerlo de deepp seek
+const filas = parseInt(prompt('Ingresa el número de filas: '));
+const columnas = parseInt(prompt('Ingresa el número de columnos: '));
+
+let numeroInicial = filas * columnas;
+
+document.write("<table border='1'>");
+for(let i = 0; i < filas; i++){
+    document.write("<tr>");
+    for(let j = 0; j < columnas; j++){
+        document.write(`<td>${numeroInicial}</td>`);
+        numeroInicial--;
+    }
+    document.write('</tr>')
+}
+document.write('</table>');
+
+
+//! forma hasta donde yo llegue
+/*
+for(let i = 1; i<= 7; i++){
+    for(let j = 1; j <= 5; j++)
+    {
+        document.write(1);
+    }
+    document.write('<br>')
+}
+*/
