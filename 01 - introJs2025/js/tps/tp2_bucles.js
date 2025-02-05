@@ -264,6 +264,7 @@ if(!isNaN(numero)){
 */ 
 
 //? forma de hacerlo de deepp seek
+/*
 const filas = parseInt(prompt('Ingresa el número de filas: '));
 const columnas = parseInt(prompt('Ingresa el número de columnos: '));
 
@@ -280,6 +281,8 @@ for(let i = 0; i < filas; i++){
 }
 document.write('</table>');
 
+*/
+
 
 //! forma hasta donde yo llegue
 /*
@@ -291,3 +294,45 @@ for(let i = 1; i<= 7; i++){
     document.write('<br>')
 }
 */
+
+//* Sección de Math.
+
+
+/*11- Realiza un script que pida por teclado 3 edades y 3 nombres e indique el nombre del mayor. *
+Nota: ver funcion Math() https://www.w3schools.com/js/js_math.asp */
+
+alert('Eliga 3 edades y 3 nombres');
+let nombre1 = prompt('Primer nombre: ');
+let nombre2 = prompt('Segundo nombre: ');
+let nombre3 = prompt('Tercer nombre: ');
+
+let edad1  = parseInt(prompt('Ingrese la primer edad'));
+let edad2  = parseInt(prompt('Ingrese la segunda edad'));
+let edad3  = parseInt(prompt('Ingrese la tercera edad'));
+
+let edadMaxima = Math.max(edad1,edad2,edad3);
+
+if(edad1 == edadMaxima){
+    console.log(`El nombre del mayor es: ${nombre1} con ${edad1}`);
+
+} else if(edad2 == edadMaxima){
+    console.log(`El nombre del mayor es: ${nombre2} con ${edad2}`);
+
+}else {
+    console.log(`El nombre del mayor es: ${nombre3} con ${edad3}`);
+    
+}
+
+/*12- Realiza un script que genere un número aleatorio entre 1 y 99*/
+
+//* Ejercicos con String
+
+/*13- Realiza un script que pida un texto y lo muestre en mayúsculas. */
+
+/*14- Realiza un script que pida una cadena de texto y lo muestre poniendo el signo – entre cada carácter sin usar el método replace. Por ejemplo, si tecleo “hola qué tal”, deberá salir “h-o-l-a- -q-u-e- -t-a-l”./
+
+/*15- Realiza un script que cuente el número de vocales que tiene un texto.*/
+
+/*16- Realiza un script que pida una cadena de texto y la devuelva al revés. Es decir, si tecleo “hola que tal” deberá mostrar “lat euq aloh”.*/
+
+/*17- Realiza un script que muestre la posición de la primera vocal de un texto introducido por teclado.*/
