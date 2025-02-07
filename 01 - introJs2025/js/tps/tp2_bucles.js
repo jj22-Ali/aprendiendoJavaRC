@@ -301,6 +301,9 @@ for(let i = 1; i<= 7; i++){
 /*11- Realiza un script que pida por teclado 3 edades y 3 nombres e indique el nombre del mayor. *
 Nota: ver funcion Math() https://www.w3schools.com/js/js_math.asp */
 
+//!Esta forma que elegir resolver
+
+/*
 alert('Eliga 3 edades y 3 nombres');
 let nombre1 = prompt('Primer nombre: ');
 let nombre2 = prompt('Segundo nombre: ');
@@ -322,17 +325,181 @@ if(edad1 == edadMaxima){
     console.log(`El nombre del mayor es: ${nombre3} con ${edad3}`);
     
 }
+*/
 
 /*12- Realiza un script que genere un número aleatorio entre 1 y 99*/
+
+//! esta forma que hice yo
+/*console.log(Math.floor(Math.random() * 100)); //100*/
 
 //* Ejercicos con String
 
 /*13- Realiza un script que pida un texto y lo muestre en mayúsculas. */
 
-/*14- Realiza un script que pida una cadena de texto y lo muestre poniendo el signo – entre cada carácter sin usar el método replace. Por ejemplo, si tecleo “hola qué tal”, deberá salir “h-o-l-a- -q-u-e- -t-a-l”./
+//!esta es la forma que le hizo yo
+/*
+let texto = prompt('Ingrese cualquier texto: ').toUpperCase();
+
+document.write(texto);
+*/
+
+/*14- Realiza un script que pida una cadena de texto y lo muestre poniendo el signo – entre cada carácter sin usar el método replace. Por ejemplo, si tecleo “hola qué tal”, deberá salir “h-o-l-a- -q-u-e- -t-a-l”.*/
+
+//? Forma de deepseek
+/*
+const texto = prompt('Introduce una cadena de texto: ');
+
+
+let resultado = "";
+
+
+for(let i = 0; i < texto.length; i++){
+    
+    resultado = resultado + texto[i];
+    
+    if(i < texto.length -1 ){
+        resultado += "-";
+    }
+}
+
+document.write(resultado);
+*/
+
+//! forma incompleta que hice yo
+/*
+let texto = prompt('Ingrese un texto: ')
+
+console.log(texto.split(' '));
+*/
+
 
 /*15- Realiza un script que cuente el número de vocales que tiene un texto.*/
 
+//? Forma que hizo deepseek(mucho mejor)
+
+/*
+const texto = prompt('Introduce un texto: ');
+
+const textoMinusculas = texto.toLocaleLowerCase();
+
+const vocales = 'aeiouáéíóú';
+
+let contador = 0;
+
+for(let i = 0; i < textoMinusculas.length; i++){
+    if(vocales.includes(textoMinusculas[i])){
+        contador++;
+    }
+}
+
+console.log(textoMinusculas);
+
+
+console.log(`El texto tiene ${contador} vocal(es)`);
+*/
+
+
+//! esta es la forma que hice yo
+/*
+let texto = prompt('Ingrese cualquier texto: ');
+
+let sumVocales = 0;
+
+for(let i = 0; i < texto.length; i++){
+    if(texto[i] == 'a' || texto[i] == 'e' || texto[i] == 'i' ||  texto[i] == 'o' || texto[i] == 'u'){
+        sumVocales = sumVocales + 1;
+    }
+}
+
+console.log(texto);
+console.log(`La cantidad de vocales que tiene el texto es:${sumVocales}`);
+
+*/
+
+
 /*16- Realiza un script que pida una cadena de texto y la devuelva al revés. Es decir, si tecleo “hola que tal” deberá mostrar “lat euq aloh”.*/
 
+//? Deepseek me dio dos formas
+
+//? 1 (mejor que el mio)
+
+/*
+const texto = prompt("Introduce una cadena de texto:");
+console.log(texto);
+
+const textoInvertido = texto.split("").reverse().join("");
+
+console.log(`Texto original: ${texto}`);
+console.log(`Texto invertido: ${textoInvertido}`);
+*/
+
+//? 2 (mejor que el mio)
+
+/*
+const texto = prompt("Introduce una cadena de texto:");
+
+let textoInvertido = "";
+
+for (let i = texto.length - 1; i >= 0; i--) {
+    textoInvertido += texto[i]; 
+}
+
+console.log(`Texto original: ${texto}`);
+console.log(`Texto invertido: ${textoInvertido}`);
+
+*/
+
+//! Esta es la forma que hice yo 
+/*
+let texto = prompt('Ingrese texto: ');
+let x = "";
+let textoAlReves = "";
+
+
+for(let i = 1; i <= texto.length; i++){
+    x = texto.at(-i);
+    textoAlReves += x;
+}
+
+console.log(textoAlReves);
+
+*/
+
 /*17- Realiza un script que muestre la posición de la primera vocal de un texto introducido por teclado.*/
+
+//? Forma que hizo deepseek
+
+const texto = prompt("Introduce un texto: ");
+
+const textoMinusculas = texto.toLowerCase();
+
+const vocales = "aeiouáéíóú"
+
+let posicionPrimeraVocal = -1;
+
+for(let i = 0; i < textoMinusculas.length; i++){
+    if(vocales.includes(textoMinusculas[i])){
+        posicionPrimeraVocal = i;
+        break;
+    }
+}
+
+if(posicionPrimeraVocal !== -1){
+    console.log(`La primera vocal está en la posición: ${posicionPrimeraVocal}`);
+    
+} else {
+    console.log('No se encontraorn vocales en el texto.');
+    
+}
+//! foma que hice yo
+/*
+let texto = prompt('Ingreses un texto: ');
+console.log(texto);
+
+for(let i = 0; i < texto.length - 1; i++){
+    if(texto[i] == 'a' || texto[i] == 'i' || texto[i] == 'e' || texto[i] == 'o' || texto[i] == 'u' ){
+        console.log(`La primera vocal es: ${texto[i]}`);
+        break;
+    }
+}
+*/
