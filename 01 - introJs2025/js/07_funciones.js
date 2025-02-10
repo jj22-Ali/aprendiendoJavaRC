@@ -73,3 +73,34 @@ const saludarAlmuno = function (nombre){
 }
 
 saludarAlmuno('Marla')
+
+//*--------------------------------------------------------------------
+
+//? ARROW
+
+const cubo = (num) =>{
+    return Math.pow(num, 3);
+}
+console.log(cubo(2));
+
+//----------------------------
+
+const cubo1 = (num) => Math.pow(num, 3);
+console.log(cubo1(3));
+
+//*--------------------------------------------------------------------
+//? SCOPE (alcance/ambito)
+
+//? SCOPE global
+let nombre3 = 'Mario';
+
+//? SCOPE local
+
+const presentar = () => {
+    let nombre3 = 'Batistuta'
+    return `Bienvenido ${nombre3}`
+}
+
+console.log(presentar());
+
+
