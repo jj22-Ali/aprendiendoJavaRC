@@ -75,11 +75,13 @@ doSomething(function(result){
 //? METODOS DE ARRAYS
 
 //? SORT()
+//* ordena en orden alfabetico, de mayor a menor o alreves
 
 const numeros = [95, 34, 2, 67, 579, 4, 213];
 
 const nombres = ['Matilde', 'Ruben', 'Lionel', 'Adriano', 'Emilio'];
 
+/*
 let nombresOrdenados = nombres.sort();
 console.log(nombresOrdenados);
 
@@ -87,3 +89,73 @@ let numerosOrdenados = numeros.sort(function (a,b) {
     return a - b;
 })
 console.log(numerosOrdenados);
+*/
+
+//? metodo .filter()
+
+//* filter devuelve un array  con la condión desiganada en este ejemplos los pares del array original
+//let pares = numeros.filter((numero) =>{
+//    return numero % 2 === 0;
+//});
+
+//* Aca filtra los mayor de 100
+//let mayorDeCien = numeros.filter((numero) =>{
+//    return numero > 100;
+//});
+
+//console.log(pares);
+//console.log(mayorDeCien);
+
+//? Metodo .find()
+//* .find() devuelve el primer valor que cumpla con la condición o devuelve null
+
+/*
+let busquedaNumero = numeros.find((numero) =>{
+    return numero < 100;
+});
+
+console.log(busquedaNumero);
+
+let busquedaNombre = nombres.find((nombre) => {
+    return nombre.startsWith('L')
+});
+
+console.log(busquedaNombre);
+ 
+*/
+
+//? Metodo .findIndex()
+//* recorre todo el array, y devuelve el indice del elemento que cumpla la condición
+
+/*
+let indice = nombres.findIndex((nombre) => {
+    return nombre === 'Lionel'
+});
+
+console.log(indice);
+
+*/
+
+//? Metodo .forEach()
+//* recorre todo el array y realiza una función por cada elemento
+/*
+nombres.forEach((nombre) => {
+    console.log(nombre);
+});
+
+// forma engorrosa
+
+for(let i = 0; i < nombres.length ; i++){
+    console.log(nombres[i]);
+    
+}
+*/
+
+//? Metodo .map()
+// recorre todo el array y devuelve uno nuevo
+
+let resultados = numeros.map((numero) => {
+    return numero + 1;
+});
+
+console.log(resultados);
