@@ -16,6 +16,21 @@ while(x == false){
 }
 */
 
+//? Asi lo hice la profe
+
+// let age = parseInt(prompt("Ingresa tu edad  "));
+
+// //verificar si el numero ingresado es valido
+// if (!isNaN(age)) {
+//     if (age >= 18) {
+//         document.write("Puedes conducir");
+//     }else{
+//         document.write("Aun eres pequeño para conducir");
+//     }
+// }else {
+//     alert("Introduce un numero válido");
+// }
+
 /*2- Escribir un programa que solicite una nota(número) de 0 a 10. luego mostrar la calificación es un alert según los siguientes rangos de nota.
 0-2:Muy deficiente
 3-4: Insuficiente
@@ -64,6 +79,47 @@ while(x == false){
 }
 */
 
+//? Asi lo hice la profe
+// let nota;
+// do {
+//   nota = parseInt(prompt("Ingresa una nota del 0 al 10"));
+//   console.log(nota);
+//   //verificar si la nota es un numero y ademas  esta entre 0 y 10
+//   if (!isNaN(nota) && nota >= 0 && nota <= 10) {
+//     switch (nota) {
+//       case 0:
+//       case 1:
+//       case 2:
+//         alert("Muy deficiente");
+//         break;
+//       case 3:
+//       case 4:
+//         alert("Insuficiente");
+//         break;
+//       case 5:
+//       case 6:
+//         alert("Suficiente");
+//         break;
+//       case 7:
+//         alert("Bien");
+//         break;
+//       case 8:
+//       case 9:
+//         alert("Notable");
+//         break;
+//       case 10:
+//         alert("Sobresaliente");
+//         break;
+//       default:
+//         alert("Nota erronea");
+//         break;
+//     }
+//   }else{
+//     alert("Ingrese un numero valido");
+//   }
+//   //si no pulse cancelar el bucle se vuelve a repetir
+// } while (confirm("¿Desea continuar?"));
+
 /* 3- Realiza un script que pida cadenas de texto  hasta que se pulse “cancelar”. Al salir con “cancelar” deben mostrarse todas las cadenas concatenadas con un guión -.
 
 Nota: usar confirm() https://www.w3schools.com/jsref/met_win_confirm.asp*/
@@ -86,6 +142,21 @@ let unirTextos = textoCompleto.join(' - ')
 console.log(unirTextos);
 
 */
+
+//? Asi lo hice la profe
+
+// let resultado = '';
+// do {
+// 	let palabra = prompt('Ingresa una palabra');
+// 	if (resultado == '') {
+// 		//si es la primer palabra, concateno sin usar el guion
+// 		resultado = palabra;
+// 	} else {
+// 		resultado = resultado + '-' + palabra;
+// 	}
+// } while ( confirm('¿Desea continuar?'));
+
+// document.write(resultado);
 
 /*4- Realiza un script que pida números hasta que se pulse “cancelar”. Si no es un número deberá indicarse con un «alert» y seguir pidiendo números. Al salir con “cancelar” deberá indicarse la suma total de los números introducidos. */
 
