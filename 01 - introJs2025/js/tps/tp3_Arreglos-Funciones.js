@@ -13,6 +13,19 @@ meses.forEach((mes) =>{
 document.write('</ul>');
 */
 
+//! Asi lo hice la profe
+
+/*
+let month = ['Enero','Febrero','Marzo', 'Abril', 'Mayo','Junio','Julio','Agosto', 'Septiembre','Octubre','Noviembre','Diciembre' ];
+
+document.write('<h1>Lista de Meses</h1>');
+document.write('<ul>');
+for(let i=0; i < month.length; i++){
+    document.write(`<li>${month[i]}</li>`)
+}
+document.write('</ul>');
+*/
+
 //*2-  Crear un script que solicite al usuario mediante un prompt el nombre de ciudades y almacenarlas en un arreglo, cuando el usuario selecciona cancelar se debe mostrar el arreglo generado, luego realizar las siguientes acciones:
 
 // * Mostrar la longitud del arreglo.
@@ -64,6 +77,7 @@ document.write('</ul>');
 // ciudades.splice(1, 2, 'Barcelona, España')
 // document.write(`(Actualizado)La segunda ciudad: ${ciudades[1]}<br>`);
 
+//! Muy parecido hice la profe al que hice yo
 
 //*3- Escribir un script que simule el lanzamiento de dos dados. Hacer uso de la función Math.random para obtener números aleatorios entre 1 y 6 para cada uno de los lanzamientos de los dados. Sumar el resultado de lanzar dos dados y anotar en un array el número de apariciones de dicha suma, repitiendo 50 veces esta operación.
 
@@ -133,30 +147,156 @@ document.write('</ul>');
 
 //! Asi lo hizo chatgpt
 
-const min = 1;
-const max = 6;
-let apariciones = Array(11).fill(0); // Inicializa un array de 11 posiciones con 0
-let resultadosPosibles = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+// const min = 1;
+// const max = 6;
+// let apariciones = Array(11).fill(0); // Inicializa un array de 11 posiciones con 0
+// let resultadosPosibles = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
-for (let i = 0; i < 50; i++) {
-    let dado1 = Math.floor(Math.random() * (max - min + 1)) + min;
-    let dado2 = Math.floor(Math.random() * (max - min + 1)) + min;
-    let lanzamiento = dado1 + dado2;
+// for (let i = 0; i < 50; i++) {
+//     let dado1 = Math.floor(Math.random() * (max - min + 1)) + min;
+//     let dado2 = Math.floor(Math.random() * (max - min + 1)) + min;
+//     let lanzamiento = dado1 + dado2;
 
-    console.log(lanzamiento);
+//     console.log(lanzamiento);
     
 
-    apariciones[lanzamiento - 2]++; // Restamos 2 para indexar correctamente
+//     apariciones[lanzamiento - 2]++; // Restamos 2 para indexar correctamente
+// }
+
+// console.log(apariciones);
+
+// // Generación de la tabla en HTML
+// document.write('<table border="2">');
+// document.write('<tr><th>Suma</th><th>Apariciones</th></tr>');
+
+// for (let i = 0; i < resultadosPosibles.length; i++) {
+//     document.write(`<tr><td>${resultadosPosibles[i]}</td><td>${apariciones[i]}</td></tr>`);
+// }
+
+// document.write('</table>');
+
+//*4- Escribir el código de una función a la que se pasa como parámetro un número entero y devuelve como resultado una cadena de texto que indica si el número es par o impar. Mostrar por pantalla el resultado devuelto por la función.
+
+//? Asi lo hice yo
+
+// const paridad = (numero) =>{
+//     let parOimpar = numero % 2;
+//     if(parOimpar == 0){
+//         return document.write(`El numero ${numero} es Par`)
+//     }else{
+//         return document.write(`El numero ${numero} es IMPAR`)
+//     }
+// }
+
+// let num = parseInt(prompt('Ingrese cualquir numero: '));
+
+// paridad(num);
+
+//! Bastante parecido al que hizo la profe
+
+//*5- Definir una función que muestre información sobre una cadena de texto que se le pasa como argumento. A partir de la cadena que se le pasa, la función determina si esa cadena está formada sólo por mayúsculas, sólo por minúsculas o por una mezcla de ambas.
+
+// let texto = prompt('Ingrese cualquier texto: ');
+
+// function verificar(texto){
+//     let textoMayusculas = texto.toUpperCase();
+//     let textoMinusculas = texto.toLowerCase();
+
+//     if(textoMayusculas === texto){
+//         return console.log('El texto esta formado por mayusculas');   
+//     } else if (textoMinusculas === texto){
+//         return console.log('El texto esta formado por minusculas');
+        
+//     } else{
+//         return console.log('Esta formado por Mayusculas y Minusculas');
+        
+//     }
+// }
+
+// verificar(texto);
+
+//! Me gusta mas como lo hice la profe
+
+/*
+function informacion(cadena){
+    if(cadena === cadena.toUpperCase()){
+        return 'completamente en mayúsculas';
+    }else if(cadena === cadena.toLowerCase()){
+        return 'completamente en minúsculas';
+    }else{
+        return 'con mayúsculas y minúsculas';
+    }
 }
 
-console.log(apariciones);
+let cadena=prompt("Ingrese una texto para analizar");
+document.write(`El texto ingresado esta escrito ${informacion(cadena)}`);
+*/
 
-// Generación de la tabla en HTML
-document.write('<table border="2">');
-document.write('<tr><th>Suma</th><th>Apariciones</th></tr>');
 
-for (let i = 0; i < resultadosPosibles.length; i++) {
-    document.write(`<tr><td>${resultadosPosibles[i]}</td><td>${apariciones[i]}</td></tr>`);
+//*6- Solicitar por pantalla al usuario ingresar el valor de los lados de un rectángulo, luego crear una función para calcular su perímetro y mostrarlo por pantalla.
+/*
+La fórmula del perímetro  es p = 2*(a +b)
+
+Ejemplo:
+
+Input:
+lado A = 24
+lado B = 5
+
+Output: 58
+
+*/
+
+// let ladoA = parseInt(prompt('ingresar lado a del rectangulo: '));
+
+// let ladoB = parseInt(prompt('Ingrese el lado b del rectangulo: '));
+
+
+// const perimetro = (a, b) => {
+//     return 2*(a + b);
+// }
+
+// document.write(`<h2>Lados del Rectangulo</h2>`);
+// document.write(`<ul><li>lado a: ${ladoA}</li><li>lado b: ${ladoB} </li></ul>`);
+// document.write(`El perimetro es: ${perimetro(ladoA, ladoB)}`)
+
+//! Lo hice identico que la profe
+
+//*7- Escriba un script que muestre la tabla de multiplicar de un número ingresado por pantalla, la creación de la tabla debe ser realizada con una función y mostrar solo los resultados del 1 al 10 del número elegido por el usuario.
+
+//? Asi lo hice yo
+
+// let x = parseInt(prompt('Ingrese cualquier numero'))
+
+// function multiplicar(x){
+//     document.write(`<h3>La tabla de ${x} es: </h3>`)
+//     for(let i = 0; i <= 10; i++){
+//         document.write(`<ul><li>${x} x ${i} = ${i * x}</ul></li>`)
+//     }
+// }
+
+// multiplicar(x);
+
+//! Asi lo hice la profe
+
+function tablaMultiplicar(numero){
+    document.write(`<table>
+    <thead>
+        <tr>
+            <th colspan="2">Tabla de multiplicar</th>
+        </tr>
+    </thead>
+    <tbody>`);
+
+    for(let i=1; i<=10; i++){
+        document.write(`
+        <tr>
+            <td>${numero} * ${i} </td>
+            <td>${numero * i}</td>
+        </tr>`);  
+    }
+    document.write(`</tbody> </table>`);
 }
 
-document.write('</table>');
+let numero=parseInt(prompt("Ingrese el numero para mostrar su tabla de multiplicar"));
+tablaMultiplicar(numero);
