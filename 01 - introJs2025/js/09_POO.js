@@ -52,3 +52,55 @@ let alumno2 ={
 };
 
 alumno2.saludar();
+
+//! Recorrer el objeto alumno2
+
+// for(const propiedad in alumno2){
+//     console.log(`${propiedad} = ${alumno2[propiedad]}`);
+// }
+
+//! Ocultar datos sensibles del objeto
+// for(const propiedad in alumno2){
+//     if(propiedad !== "contraseña" && propiedad !== "saludar"){
+//         console.log(`${propiedad}: ${alumno2[propiedad]}`);
+        
+//     }
+// }
+
+//--------------------------------------------------------------------
+//--------------------------------------------------------------------
+
+//! Array o arreglos de objetos
+
+//? BD -DB - Base de Datos -------------------------------------------
+
+let usuarios = [
+    {
+        nombre:'Fabricio',
+        curso: 'FullStack'
+    },
+    {
+        nombre:'Gabriela',
+        curso: 'FullStack'
+    },
+    {
+        nombre:'Pedro',
+        curso: 'FrontEnd'
+    },
+]
+
+console.log(usuarios);
+
+//Recorrer un array
+//for 
+
+for(let index = 0; index < usuarios.length ; index++){
+    console.log(`Nombre: ${usuarios[index].nombre} - Curso: ${usuarios[index].curso}`);
+    
+};
+
+//forEach - {callBack
+
+usuarios.forEach((alumno) =>{
+    console.log(`Nombre: ${alumno.nombre} - ${alumno.curso}`);
+});
